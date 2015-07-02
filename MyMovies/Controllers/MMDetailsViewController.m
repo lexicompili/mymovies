@@ -17,6 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.detailsView = [[[NSBundle mainBundle] loadNibNamed:@"MMDetails" owner:self options:nil] firstObject];
+    [self.view addSubview:self.detailsView];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *data = [defaults objectForKey:@"currentMovie"];
+    self.detailsView.headerTitleLabel.text = [data objectForKey:@"name"];
+    self.detailsView.titleLabel.text = [data objectForKey:@"name"];
+    self.detailsView.timeLabel.text= [NSString stringWithFormat:@"%@ - %@",[data objectForKey:@"start_time"], [data objectForKey:@"end_time"]];
+    //self.detailsView.summaryLabel.text = [data objectForKey:@"channel"];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HWCustomCell : UITableViewCell
+@interface MMCustomCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *numberLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *ratingimageView;
 
 
 @end

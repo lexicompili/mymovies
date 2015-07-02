@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMHomeView.h"
+
 
 @interface MMHomeView : UIView
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

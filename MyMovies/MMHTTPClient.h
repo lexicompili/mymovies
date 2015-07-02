@@ -1,6 +1,6 @@
 //
 //  WebServiceRequestManager.h
-//  SketchDetective
+//  MyMovies
 //
 //  Created by User on 6/17/15.
 //  Copyright (c) 2015 Seer Technologies Inc. All rights reserved.
@@ -9,19 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "SDReachability.h"
 
-@interface SDHTTPClient : NSObject
+@protocol MMHTTPClientProtocol <NSObject>
+
+@optional
+-(void) resultFromCall: (NSMutableDictionary *)result;
+
+@end
+
+
+@interface MMHTTPClient : NSObject
 
 + (id)sharedManager;
 
-//API Calls
--(void) signUpWithFirstName: (NSString *) first_name
-                      last_name: (NSString *) last_name
-                          email: (NSString *) email
-                           pass: (NSString *) pass;
--(void) loginWithEmail: (NSString *) email
-                 password: (NSString *) pass;
-
+@property (weak) id<MMHTTPClientProtocol> delegate;
 @property Reachability *internetReachable;
 @property NSObject *owner;
 
+-(void) getMovies:(int) offset;
 @end

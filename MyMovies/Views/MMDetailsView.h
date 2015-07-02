@@ -10,4 +10,12 @@
 
 @interface MMDetailsView : UIView
 
+
+@property (weak, nonatomic) IBOutlet UILabel *headerTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *summaryLabel;
+
+
+
 @end

@@ -1,3 +1,4 @@
+
 //
 //  MMLoadingCellView.m
 //  MyMovies
@@ -6,9 +7,9 @@
 //  Copyright (c) 2015 Mary Alexis Solis. All rights reserved.
 //
 
-#import "MMLoadingCellView.h"
+#import "MMLoadingCell.h"
 
-@implementation MMLoadingCellView
+@implementation MMLoadingCell
 
 - (void)awakeFromNib {
     // Initialization code

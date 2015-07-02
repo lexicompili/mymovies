@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Mary. All rights reserved.
 //
 
-#import "HWCustomCell.h"
+#import "MMCustomCell.h"
 
-@implementation HWCustomCell
+@implementation MMCustomCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

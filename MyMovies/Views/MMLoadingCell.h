@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MMLoadingCellView : UITableViewCell
+@interface MMLoadingCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

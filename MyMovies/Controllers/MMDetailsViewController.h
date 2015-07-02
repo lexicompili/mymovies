@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMDetailsView.h"
 
 @interface MMDetailsViewController : UIViewController
+
+@property MMDetailsView *detailsView;
 
 @end
